@@ -70,7 +70,7 @@ class Home extends Component {
     const { posts, page, allPosts, postsPerPage, searchValue } = this.state;
 
     const noMorePostNext = page * postsPerPage >= allPosts.length;
-    const noMorePostPrevius = page == 1;
+    const noMorePostPrevius = page === 1;
 
     const filteredPosts = !searchValue
       ? posts
