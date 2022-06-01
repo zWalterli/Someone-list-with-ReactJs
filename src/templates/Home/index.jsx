@@ -56,11 +56,11 @@ export const Home = () => {
 
     setPosts(postAndPhotos.slice((page - 1) * postsPerPage, postsPerPage));
     setAllPosts(postAndPhotos);
-  }, []);
+  }, [setAllPosts, setPosts]);
 
   useEffect(() => {
     handleLoadPosts(0, postsPerPage);
-  }, [handleLoadPosts, postsPerPage]);
+  }, []);
 
   return (
     <section className="container">
